@@ -25,6 +25,11 @@
     "jquery": "^3.1.0"
   },
   "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "bootstrap-loader": "^1.0.10",
+    "bootstrap-sass": "^3.3.7",
     "bootstrap-webpack": "0.0.5",
     "css-loader": "^0.24.0",
     "exports-loader": "^0.6.3",
@@ -33,6 +38,9 @@
     "imports-loader": "^0.6.5",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "node-sass": "^3.8.0",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",

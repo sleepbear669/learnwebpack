@@ -1,8 +1,7 @@
 module.exports = {
     entry: "./entry.js",
     output: {
-        path: __dirname,
-        filename: "bundle.js"
+        filename: "./bundle.js"
     },
     module: {
         loaders: [
@@ -10,7 +9,21 @@ module.exports = {
                 test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'url'
             },
-            { test: /\.css$/, loader: 'style!css'}    
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                query: {
+                    presets: ['es2015']
+                }
+            },
+            {
+                test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/, loader: 'imports?jQuery=jquery'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css'
+            }
         ]
     }
 };

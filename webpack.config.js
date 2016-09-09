@@ -1,10 +1,14 @@
 module.exports = {
-    entry: "./entry.js",
+    entry: "./src/app/main.ts",
     output: {
         filename: "./bundle.js"
     },
     module: {
         loaders: [
+            {
+                test: /\.ts$/,
+                loaders: ['ts', 'angular2-template-loader']
+            },
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'url'
